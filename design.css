@@ -1,0 +1,45 @@
+/* 
+HEADER */
+.herophoto {
+  width: 100%;
+}
+
+/* 
+NAVIGATION */
+header ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  padding: 2rem;
+  justify-content: flex-start;
+}
+li {
+  padding: 2rem;
+}
+
+/* //GRID SECTION FOR LAST SECTION */
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* LAST SECTION STYLING */
+.cecile {
+  background-color: #aed5b2;
+}
+.daniel {
+  background-color: #d7c6ed;
+}
+
+.imgcecile {
+  border-radius: 20%;
+}
+
+.imgdaniel {
+  border-radius: 20%;
+}
+
+/* FOOTER */
+footer {
+  background-color: #8eb3d4;
+}
