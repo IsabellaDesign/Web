@@ -1,0 +1,30 @@
+main {
+  grid-template-columns: 60% 40%;
+  display: grid;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  grid-column: 1/-1;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+.product-info {
+  background-color: #d6c5ed;
+  padding: 1em;
+  justify-content: center;
+  align-self: center;
+  grid-column: 2/-1;
+}
+
+.image-fetched {
+  max-width: 40vw;
+  max-height: 40vw;
+}
