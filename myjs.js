@@ -1,4 +1,4 @@
-getTheBags();
+// getTheBags();
 getTheImages();
 
 function getTheImages() {
@@ -34,10 +34,6 @@ function setupImages(imgArray) {
 //   bagArray.forEach((bag) => {
 //     const copy = template.cloneNode(true);
 //     copy.querySelector("h1.bagName").textContent = bag.title.rendered;
-
-//     // copy.querySelector("img.bagPic").src =
-//     //   bag._embedded["wp:featuremedia"][0].media_details.sizes.full.source_url;
-
 //     document.querySelector("main").appendChild(copy);
 //   });
 // }

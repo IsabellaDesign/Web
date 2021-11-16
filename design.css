@@ -43,3 +43,9 @@ li {
 footer {
   background-color: #8eb3d4;
 }
+
+/* COLLECTION */
+.bagPic {
+  max-width: 40%;
+  max-height: 40%;
+}
