@@ -14,6 +14,7 @@ function setupImages(imgArray) {
   imgArray.forEach((bag) => {
     const copy = template.cloneNode(true);
     copy.querySelector("img").src = bag.guid.rendered;
+    copy.querySelector("img").alt = bag.slug.rendered;
     document.querySelector("main").appendChild(copy);
   });
 }
