@@ -9,13 +9,13 @@ function getTheImages() {
 
 function setupImages(imgArray) {
   const template = document.querySelector("template#template").content;
-  const parentElement = document.querySelector(".collectionSection");
+  const parentElement = document.querySelector("section.collectionSection");
 
   imgArray.forEach((bag) => {
     const copy = template.cloneNode(true);
     copy.querySelector("img").src = bag.guid.rendered;
     copy.querySelector("img").alt = bag.slug.rendered;
-    document.querySelector("main").appendChild(copy);
+    parentElement.append(copy);
   });
 }
 
