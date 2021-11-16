@@ -200,3 +200,10 @@ a:link {
   width: 20px;
   height: 20px;
 }
+footer {
+  background-color: #8eb3d4;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 2em;
+}
