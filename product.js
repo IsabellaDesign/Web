@@ -32,7 +32,7 @@ function handleData(bags) {
     // clone it
     const myClone = myTemplate.cloneNode(true);
     // populate with data
-    myClone.querySelector("h3").textContent = bag.name;
+    myClone.querySelector("h3").textContent = bag.title;
     myClone.querySelector("img").src = bag.pictures;
     myClone.querySelector("p.color").textContent = "Color: " + bag.color;
     myClone.querySelector("p.Price").textContent = "Price: " + bag.price;

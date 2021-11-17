@@ -7,6 +7,7 @@ ul.breadcrumb {
   list-style: none;
   grid-column: 1/-1;
 }
+
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
@@ -52,7 +53,10 @@ ul.breadcrumb li + li:before {
 .show-desktop {
   display: block;
 }
-
+.headerContainer-home,
+.breadcrumbs {
+  grid-column: 1/-1;
+}
 .nav {
   padding: 0;
   list-style: none;
