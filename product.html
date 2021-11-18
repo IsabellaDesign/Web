@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILFEN STUDIOS</title>
     <link rel="stylesheet" href="product.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -64,40 +70,20 @@
           <li><a href="#" class="prod-name">.</a></li>
         </ul>
       </section>
-      <section class="image-section">
-        <img src="pic2.jpg" alt="" class="image-fetched" />
-        <img src="pic2.jpg" alt="" class="image-fetched" />
-        <img src="pic2.jpg" alt="" class="image-fetched" />
-      </section>
-      <section class="product-info">
-        <h3 class="prod-name">Shoulder THORA Bag</h3>
-        <p class="Price">399,00 DKK</p>
-        <p class="prod-info">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-          vero eros et accumsan et iusto odio dignissim qui blandit praesent
-          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-          Nam liber tempor cum soluta nobis eleifend option congue nihil
-          imperdiet doming id quod mazim placerat facer possim assum.
-        </p>
-        <p class="color">Color: Blue</p>
-        <p class="dimensions">Dimensions:29x37x18 cm</p>
-        <h4 class="material-name">Vegan</h4>
-        <p class="material-info">
-          Typi non habent claritatem insitam; est usus legentis in iis qui facit
-          eorum claritatem. Investigationes demonstraverunt lectores legere me
-          lius quod ii legunt saepius. Claritas est etiam processus dynamicus,
-          qui sequitur mutationem consuetudium lectorum. Mirum est notare quam
-          littera gothica, quam nunc putamus parum claram, anteposuerit
-          litterarum formas humanitatis per seacula quarta decima et quinta
-          decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant
-          sollemnes in futurum.
-        </p>
-      </section>
+      <template id="bagTemplate">
+        <section class="image-section">
+          <img src="" alt="" class="image-fetched" />
+        </section>
+        <section class="product-info">
+          <h3 class="prod-name"></h3>
+          <p class="Price"></p>
+          <p class="prod-info"></p>
+          <p class="color"></p>
+          <p class="dimensions"></p>
+          <h4 class="material-name"></h4>
+          <p class="material-info"></p>
+        </section>
+      </template>
     </main>
     <footer>
       <div class="location1">
@@ -122,5 +108,6 @@
         <p>Contact</p>
       </div>
     </footer>
+    <script src="product.js"></script>
   </body>
 </html>
