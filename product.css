@@ -3,6 +3,10 @@ main {
   display: grid;
   font-family: "Montserrat", sans-serif;
 }
+footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
