@@ -18,21 +18,8 @@ function setupImages(imgArray) {
     parentElement.append(copy);
   });
 }
+/*NAV*/
 
-function getCategories() {
-  fetch(endpoint + "categories?parent=6")
-    .then((res) => res.json())
-    .then(setupCategories);
-}
-function setupCategories(catArray) {
-  const template = document.querySelector("template#categorytemplate").content;
-  const parentElement = document.querySelector("main");
-  catArray.forEach((cat) => {
-    const copy = template.clodenote(true);
-    copy.querySelector("img").setAttribute("href", "product.html?id=" + bag.id);
-    parentElement.appendChild(copy);
-  });
-}
 var menu = document.getElementById("menu");
 var nav = document.getElementById("navigation");
 var exit = document.getElementById("exit");
