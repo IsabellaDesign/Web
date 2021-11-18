@@ -41,7 +41,7 @@ function handleBag(bag) {
   document.querySelector("main").appendChild(copy);
 }
 var bigImg = document.getElementById("big");
-var subImg = document.getElementById("big").getElementsByTagName("img");
+var subImg = document.getElementsByTagName("img");
 
 for (var i = 0; i < subImg.length; i++) {
   subImg[i].addEventListener("click", full_image);
