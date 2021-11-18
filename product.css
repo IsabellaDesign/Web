@@ -1,6 +1,7 @@
 main {
   grid-template-columns: 60% 40%;
   display: grid;
+  font-family: "Montserrat", sans-serif;
 }
 ul.breadcrumb {
   padding: 10px 16px;

@@ -1,12 +1,7 @@
-// const urlParams = new URLSearchParams(window.location.search);
-const url = "http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/";
-
-// THE API key
-const options = {
-  headers: {
-    "x-apikey": "",
-  },
-};
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+const endpoint =
+  "http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/bag/" + id;
 
 fetch(url, options)
   .then((response) => {
@@ -16,31 +11,33 @@ fetch(url, options)
     return response.json();
   })
   .then((data) => {
-    // console.log(data);
-    handleData(data);
+    console.log(data);
+    if (!id) {
+      handleData(data);
+    } else handleSingleCake(data);
   })
   .catch((e) => {
     console.error("An error occured:", e.message);
   });
 
 function handleData(bags) {
-  bags.forEach((bag) => {
-    console.log(bag);
-    // make a template
-    // grab it
-    const myTemplate = document.querySelector("template").content;
-    // clone it
-    const myClone = myTemplate.cloneNode(true);
-    // populate with data
-    myClone.querySelector("h3").textContent = bag.title;
-    myClone.querySelector("img").src = bag.pictures;
-    myClone.querySelector("p.color").textContent = "Color: " + bag.color;
-    myClone.querySelector("p.Price").textContent = "Price: " + bag.price;
-    myClone.querySelector("p.prod-info").textContent = bag.description;
-    myClone.querySelector("p.dimensions").textContent = bag.dimensions;
-    myClone.querySelector("p.material-name").textContent = bag.material;
+  bags.forEach(handleBag);
+}
 
-    // append to DOM
-    document.querySelector("main").appendChild(myClone);
+function handleBag(bag) {
+  const template = document.querySelector("template").content;
+  const parentElement = document.querySelector("main").content;
+  bags.forEach((bag) => {
+    const copy = template.cloneNode(true);
+    copy.querySelector("img");
+    copy.querySelector("h3").textContent = `${bag.title.content}`;
+    copy.querySelector("p.Price").textContent = `${bag.price.content}`;
+    copy.querySelector(
+      "p.prod-info"
+    ).textContent = `${bag.description.content}`;
+    copy.querySelector("p.color").textContent = `${bag.color.content}`;
+    copy.querySelector("h4 ").textContent = `${bag.material.content}`;
+
+    parentElement.appendChild(copy);
   });
 }
