@@ -1,28 +1,25 @@
-getTheBags();
+// getTheBags();
+getTheImages();
 
-function getTheBags() {
-  fetch(
-    "http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/bag?per-page=100&_embed"
-  )
+function getTheImages() {
+  fetch("http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/media")
     .then((res) => res.json())
-    .then(setupBags);
+    .then(setupImages);
 }
 
-function setupBags(bagArray) {
-  console.log(bagArray);
+function setupImages(imgArray) {
   const template = document.querySelector("template#template").content;
-  const parentElement = document.querySelector("main");
+  const parentElement = document.querySelector("section.collectionSection");
 
-  bagArray.forEach((bag) => {
+  imgArray.forEach((bag) => {
     const copy = template.cloneNode(true);
-    copy.querySelector("h1.bagName").textContent = bag.title.rendered;
-
-    // copy.querySelector("img.bagPic").src =
-    //   bag._embedded["wp:featuremedia"][0].media_details.sizes.full.source_url;
-
-    document.querySelector("main").appendChild(copy);
+    copy.querySelector("img").src = bag.guid.rendered;
+    copy.querySelector("img").alt = bag.slug.rendered;
+    parentElement.append(copy);
   });
 }
+/*NAV*/
+
 var menu = document.getElementById("menu");
 var nav = document.getElementById("navigation");
 var exit = document.getElementById("exit");
@@ -48,3 +45,23 @@ function openNav() {
 function closeNav() {
   document.getElementById("slideNav").style.width = "0";
 }
+
+// function getTheBags() {
+//   fetch(
+//     "http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/bag?per-page=100&_embed"
+//   )
+//     .then((res) => res.json())
+//     .then(setupBags);
+// }
+
+// function setupBags(bagArray) {
+//   console.log(bagArray);
+//   const template = document.querySelector("template#template").content;
+//   const parentElement = document.querySelector(".collectionSection");
+
+//   bagArray.forEach((bag) => {
+//     const copy = template.cloneNode(true);
+//     copy.querySelector("h1.bagName").textContent = bag.title.rendered;
+//     document.querySelector("main").appendChild(copy);
+//   });
+// }

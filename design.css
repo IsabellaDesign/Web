@@ -1,37 +1,3 @@
-/* 
-HEADER */
-.herophoto {
-  width: 100%;
-}
-
-/* //GRID SECTION FOR LAST SECTION */
-.container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-/* LAST SECTION STYLING */
-.cecile {
-  background-color: #aed5b2;
-}
-.daniel {
-  background-color: #d7c6ed;
-}
-
-.imgcecile {
-  border-radius: 20%;
-}
-
-.imgdaniel {
-  border-radius: 20%;
-}
-
-/* FOOTER */
-footer {
-  background-color: #8eb3d4;
-}
-/* Margarita 1st try */
-
 #slideNav ul li a:hover {
   border-bottom: 2px solid black;
 }
@@ -101,13 +67,15 @@ main {
 
 .homeArticle {
   padding: 2em;
-  max-width: 350px;
+  max-width: 550px;
 }
 
 .homeHeading {
   padding-bottom: 1em;
 }
-
+.homeHeading2 {
+  padding-bottom: 1em;
+}
 .home-video {
   margin-top: 2em;
   position: relative;
@@ -245,11 +213,10 @@ nav ul li a:hover {
   padding-top: 3em;
   cursor: pointer;
 }
-
-.site-indicator {
-  color: #ffb9b3;
+.positionicons {
+  padding: 20px;
+  margin-left: 300px;
 }
-
 @media (max-width: 980px) {
   nav ul li a {
     font-size: 13px;
@@ -298,35 +265,20 @@ nav ul li a:hover {
   nav ul li a:hover {
     color: white;
   }
+  .positionicons {
+    display: none;
+  }
 }
 /*end of nav css*/
 
 .logo {
   width: 160px;
-  margin-left: 65px;
+  margin-left: 100px;
   margin-top: 20px;
 }
 
 a:link {
   text-decoration: none;
-}
-#grid-pic1 {
-  background-image: url("../assets/logoENG.svg");
-  height: 10vw;
-  width: 10vw;
-}
-#au-side-pic {
-  float: right;
-  height: auto;
-  width: 400px;
-  padding: 5vw;
-}
-
-#au-banner {
-  background-image: url("../assets/foodbasket.png");
-  width: 100%;
-  height: 150px;
-  margin-top: 20vh;
 }
 #au-video {
   width: 500px;
@@ -393,4 +345,71 @@ a:link {
 .icon {
   width: 20px;
   height: 20px;
+  margin-left: 15px;
+}
+#trial {
+  width: 100px;
+  height: 100px;
+  margin-left: 570px;
+  margin-top: 100px;
+}
+/* //GRID SECTION FOR LAST SECTION */
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* LAST SECTION STYLING */
+.celine {
+  display: flex;
+  background-color: #aed5b2;
+}
+.daniel {
+  display: flex;
+  background-color: #d7c6ed;
+  border-color: black;
+}
+
+.imgceline {
+  width: 200px;
+  height: 270px;
+  margin-right: 5px;
+  display: block;
+}
+
+.imgdaniel {
+  width: 200px;
+  height: 270px;
+  margin-right: 5px;
+  display: block;
+}
+.positionicons {
+  padding: 20px;
+  margin-left: 300px;
+}
+/* COLLECTION */
+.bagPic {
+  max-width: 20%;
+  max-height: 20%;
+}
+
+.collectionSection {
+  display: flex;
+  flex-flow: row;
+}
+/* FOOTER */
+footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: #8eb3d4;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 2em;
+}
+
+.gallery {
+  display: flex;
+  padding: 2px;
+  transition: 0.3s;
 }
