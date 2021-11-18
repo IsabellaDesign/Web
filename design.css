@@ -348,9 +348,12 @@ a:link {
   margin-left: 15px;
 }
 #trial {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   width: 100px;
   height: 100px;
-  margin-left: 570px;
+
   margin-top: 100px;
 }
 /* //GRID SECTION FOR LAST SECTION */
