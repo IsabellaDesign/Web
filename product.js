@@ -1,9 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-const endpoint =
+const url =
   "http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/bag/" + id;
 
-fetch(url, options)
+fetch(url)
   .then((response) => {
     if (!response.ok) {
       throw Error(response.statusText);
@@ -14,7 +14,7 @@ fetch(url, options)
     console.log(data);
     if (!id) {
       handleData(data);
-    } else handleSingleCake(data);
+    } else handleBag(data);
   })
   .catch((e) => {
     console.error("An error occured:", e.message);
@@ -26,18 +26,17 @@ function handleData(bags) {
 
 function handleBag(bag) {
   const template = document.querySelector("template").content;
-  const parentElement = document.querySelector("main").content;
-  bags.forEach((bag) => {
-    const copy = template.cloneNode(true);
-    copy.querySelector("img");
-    copy.querySelector("h3").textContent = `${bag.title.content}`;
-    copy.querySelector("p.Price").textContent = `${bag.price.content}`;
-    copy.querySelector(
-      "p.prod-info"
-    ).textContent = `${bag.description.content}`;
-    copy.querySelector("p.color").textContent = `${bag.color.content}`;
-    copy.querySelector("h4 ").textContent = `${bag.material.content}`;
 
-    parentElement.appendChild(copy);
-  });
+  const copy = template.cloneNode(true);
+  copy.querySelector("img").src = bag.pictures[0].guid;
+  copy.querySelector("img").src = bag.pictures[1].guid;
+  copy.querySelector("img").src = bag.pictures[2].guid;
+  copy.querySelector("img").src = bag.pictures[3].guid;
+  copy.querySelector("h2").textContent = `${bag.title.rendered} `;
+  copy.querySelector("p.Price").textContent = `${bag.price}` + " DKK";
+  copy.querySelector("p.prod-info").textContent = `${bag.description}`;
+  copy.querySelector("p.color").textContent = "Color: " + `${bag.color}`;
+  copy.querySelector("h4 ").textContent = "Material: " + `${bag.material}`;
+
+  document.querySelector("main").appendChild(copy);
 }

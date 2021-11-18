@@ -28,6 +28,7 @@ ul.breadcrumb li + li:before {
   justify-content: center;
   align-self: center;
   grid-column: 2/-1;
+  margin-right: 20px;
 }
 
 .image-fetched {
@@ -205,13 +206,32 @@ a:link {
     margin-left: 2em;
   }
 }
+@media only screen and (max-width: 750px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .image-section,
+  .product-info {
+    display: grid;
+    grid-column: 1;
+  }
+  .footer {
+    display: grid;
+    grid-column: auto;
+  }
+}
 .icon {
   width: 20px;
   height: 20px;
 }
+@media only screen and (min-width: 750px) {
+  footer {
+    display: flex;
+  }
+}
+
 footer {
   background-color: #8eb3d4;
-  display: flex;
   justify-content: space-between;
   color: white;
   padding: 2em;
