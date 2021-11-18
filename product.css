@@ -34,15 +34,18 @@ ul.breadcrumb li + li:before {
   width: 80%;
   height: 700px;
   overflow: hidden;
+  margin: 20px auto;
+  box-sizing: border-box;
 }
-.big img {
+#big img {
   width: 100%;
   height: 550px;
 }
-.sub img {
+#sub img {
   width: 20%;
   height: 150px;
   float: left;
+  opacity: 0.8;
 }
 .image-fetched {
   max-width: 40vw;

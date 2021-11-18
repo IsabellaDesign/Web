@@ -29,9 +29,9 @@ function handleBag(bag) {
 
   const copy = template.cloneNode(true);
   copy.querySelector("img").src = bag.pictures[0].guid;
-  copy.querySelector("img").src = bag.pictures[1].guid;
-  copy.querySelector("img").src = bag.pictures[2].guid;
-  copy.querySelector("img").src = bag.pictures[3].guid;
+  copy.querySelector("img.image-fetched").src = bag.pictures[0].guid;
+  copy.querySelector("img.image-fetched1").src = bag.pictures[1].guid;
+  copy.querySelector("img.image-fetched2").src = bag.pictures[2].guid;
   copy.querySelector("h2").textContent = `${bag.title.rendered} `;
   copy.querySelector("p.Price").textContent = `${bag.price}` + " DKK";
   copy.querySelector("p.prod-info").textContent = `${bag.description}`;
@@ -39,4 +39,14 @@ function handleBag(bag) {
   copy.querySelector("h4 ").textContent = "Material: " + `${bag.material}`;
 
   document.querySelector("main").appendChild(copy);
+}
+var bigImg = document.getElementById("big");
+var subImg = document.getElementById("big").getElementsByTagName("img");
+
+for (var i = 0; i < subImg.length; i++) {
+  subImg[i].addEventListener("click", full_image);
+}
+function full_image() {
+  var imgSrc = this.getAttribute("src");
+  bigImg.innerHTML = "<img src=" + imgSrc + ">";
 }
