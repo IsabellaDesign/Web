@@ -409,3 +409,9 @@ a:link {
 footer {
   background-color: #8eb3d4;
 }
+
+.gallery {
+  display: flex;
+  padding: 2px;
+  transition: 0.3s;
+}
