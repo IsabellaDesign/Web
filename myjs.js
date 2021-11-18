@@ -19,6 +19,21 @@ function setupImages(imgArray) {
   });
 }
 
+function getCategories() {
+  fetch(endpoint + "categories?parent=6")
+    .then((res) => res.json())
+    .then(setupCategories);
+}
+function setupCategories(catArray) {
+  const template = document.querySelector("template#categorytemplate").content;
+  const parentElement = document.querySelector("main");
+  catArray.forEach((cat) => {
+    const copy = template.clodenote(true);
+    copy.querySelector("img").setAttribute("href", "product.html?id=" + bag.id);
+    parentElement.appendChild(copy);
+  });
+}
+
 // function getTheBags() {
 //   fetch(
 //     "http://arimmdna.eu/kea/2/digitalcontent/wp21S/wp-json/wp/v2/bag?per-page=100&_embed"

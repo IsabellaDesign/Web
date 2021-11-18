@@ -213,11 +213,10 @@ nav ul li a:hover {
   padding-top: 3em;
   cursor: pointer;
 }
-
-.site-indicator {
-  color: #ffb9b3;
+.positionicons {
+  padding: 20px;
+  margin-left: 300px;
 }
-
 @media (max-width: 980px) {
   nav ul li a {
     font-size: 13px;
@@ -266,6 +265,9 @@ nav ul li a:hover {
   nav ul li a:hover {
     color: white;
   }
+  .positionicons {
+    display: none;
+  }
 }
 /*end of nav css*/
 
@@ -277,24 +279,6 @@ nav ul li a:hover {
 
 a:link {
   text-decoration: none;
-}
-#grid-pic1 {
-  background-image: url("../assets/logoENG.svg");
-  height: 10vw;
-  width: 10vw;
-}
-#au-side-pic {
-  float: right;
-  height: auto;
-  width: 400px;
-  padding: 5vw;
-}
-
-#au-banner {
-  background-image: url("../assets/foodbasket.png");
-  width: 100%;
-  height: 150px;
-  margin-top: 20vh;
 }
 #au-video {
   width: 500px;
@@ -368,10 +352,6 @@ a:link {
   height: 300px;
   margin-left: 500px;
 }
-.positionicons {
-  padding: 20px;
-  margin-left: 300px;
-}
 /* //GRID SECTION FOR LAST SECTION */
 .container {
   display: grid;
@@ -390,7 +370,6 @@ a:link {
 }
 
 .imgceline {
-  border-radius: 10%;
   width: 200px;
   height: 270px;
   margin-right: 5px;
@@ -398,16 +377,25 @@ a:link {
 }
 
 .imgdaniel {
-  border-radius: 10%;
   width: 200px;
   height: 270px;
   margin-right: 5px;
   display: block;
 }
+.positionicons {
+  padding: 20px;
+  margin-left: 300px;
+}
 
 /* FOOTER */
 footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   background-color: #8eb3d4;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 2em;
 }
 
 .gallery {
